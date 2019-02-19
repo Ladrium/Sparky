@@ -1,1 +1,1 @@
-# Sparky
+# Sparky Discord Bot

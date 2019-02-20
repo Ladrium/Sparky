@@ -1,27 +1,33 @@
+/**
+ * The following are all client options for Klasa/Discord.js.
+ * Any option that you wish to use the default value can be removed from this file.
+ * This file is init with defaults from both Klasa and Discord.js.
+ */
+
 module.exports.config = {
     /**
      * General Options
      */
-    // Disables/Enables a process.on('unhandledRejection'...) handler
+    // Disables/Enables a process.on("unhandledRejection"...) handler
     production: false,
     // The default language that comes with klasa. More base languages can be found on Klasa-Pieces
-    language: 'en-US',
+    language: "en-US",
     // The default configurable prefix for each guild
-    prefix: '++',
+    prefix: "++",
     // If custom settings should be preserved when a guild removes your bot
     preserveSettings: true,
     // If your bot should be able to mention @everyone
     disableEveryone: false,
-    // Whether d.js should queue your rest request in 'sequential' or 'burst' mode
-    apiRequestMethod: 'sequential',
+    // Whether d.js should queue your rest request in "sequential" or "burst" mode
+    apiRequestMethod: "sequential",
     // The time in ms to add to ratelimits, to ensure you wont hit a 429 response
     restTimeOffset: 500,
-    // Any Websocket Events you don't want to listen to
+    // Any Websocket Events you don"t want to listen to
     disabledEvents: [],
     // A presence to login with
     presence: {},
     // A once ready message for your console
-    readyMessage: (client) => `Successfully initialized. Ready to serve ${client.guilds.size} guild${client.guilds.size === 1 ? '' : 's'}.`,
+    readyMessage: (client) => `Successfully initialized. Ready to serve ${client.guilds.size} guild${client.guilds.size === 1 ? "" : "s"}.`,
 
     /**
      * Caching Options
@@ -54,14 +60,7 @@ module.exports.config = {
         // Provider Connection object for process based databases:
         // rethinkdb, mongodb, mssql, mysql, postgresql
         */
-     mongodb: {
-                        host: "",
-                        port: "",
-                        username: "",
-                        password: "",
-                        database: ""
-                },
-        default: 'json'
+        default: "json"
     },
 
     /**
@@ -82,7 +81,7 @@ module.exports.config = {
             autoAliases: true,
             bucket: 1,
             cooldown: 0,
-            description: '',
+            description: "",
             enabled: true,
             guarded: false,
             nsfw: false,
@@ -91,9 +90,9 @@ module.exports.config = {
             promptTime: 30000,
             requiredSettings: [],
             requiredPermissions: 0,
-            runIn: ['text', 'dm', 'group'],
+            runIn: ["text", "dm", "group"],
             subcommands: false,
-            usage: '',
+            usage: "",
             quotedStringSupport: false,
             deletable: false
         },
@@ -148,12 +147,12 @@ module.exports.config = {
         timestamps: true,
         utc: false,
         colors: {
-            debug: { time: { background: 'magenta' } },
-            error: { time: { background: 'red' } },
-            log: { time: { background: 'blue' } },
-            verbose: { time: { text: 'gray' } },
-            warn: { time: { background: 'lightyellow', text: 'black' } },
-            wtf: { message: { text: 'red' }, time: { background: 'red' } }
+            debug: { time: { background: "magenta" } },
+            error: { time: { background: "red" } },
+            log: { time: { background: "blue" } },
+            verbose: { time: { text: "gray" } },
+            warn: { time: { background: "lightyellow", text: "black" } },
+            wtf: { message: { text: "red" }, time: { background: "red" } }
         }
     },
 
@@ -173,4 +172,4 @@ module.exports.config = {
 };
 
 // The token for this bot to login with
-exports.token = '';
+exports.token = "";

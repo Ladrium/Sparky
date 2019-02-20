@@ -1,4 +1,4 @@
-exports.config = {
+module.exports.config = {
     /**
      * General Options
      */

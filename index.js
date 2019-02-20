@@ -13,4 +13,4 @@ class Sparky extends Client {
 
 }
 
-new Sparky(config).login(token);
+new Sparky(config).login(token || process.env.token);

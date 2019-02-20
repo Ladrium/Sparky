@@ -3,10 +3,10 @@
   "version": "0.0.2",
   "description": "A Discord bot that ignites a server.",
   "main": "index.js",
-	"scripts": {
-	"test": "eslint .",
+  "scripts": {
+    "test": "eslint .",
     "lint": "eslint --fix ."
-	},
+  },
   "repository": "https://github.com/Sparky-Discord-Bot/Sparky",
   "author": "Anish Shobith",
   "license": "GPL-3.0",
@@ -14,6 +14,8 @@
   "dependencies": {
     "discord.js": "discordjs/discord.js",
     "eslint": "^5.14.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
     "klasa": "dirigeants/klasa",
     "klasa-bot-plugin": "^1.0.18",
     "mongodb": "^3.1.13",

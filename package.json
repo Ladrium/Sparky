@@ -3,6 +3,9 @@
   "version": "0.0.2",
   "description": "A Discord bot that ignites a server.",
   "main": "index.js",
+"scripts": {
+  "test": "node index.js"
+  }
   "repository": "https://github.com/Sparky-Discord-Bot/Sparky",
   "author": "Anish Shobith",
   "license": "GPL-3.0",

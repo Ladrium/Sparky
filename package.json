@@ -6,7 +6,7 @@
 	"scripts": {
 	"test": "eslint .",
     "lint": "eslint --fix ."
-	}
+	},
   "repository": "https://github.com/Sparky-Discord-Bot/Sparky",
   "author": "Anish Shobith",
   "license": "GPL-3.0",

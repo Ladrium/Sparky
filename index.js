@@ -1,7 +1,7 @@
 const { Client } = require('klasa');
 const { config, token } = require('./config');
 
-class MyKlasaClient extends Client {
+class Sparky extends Client {
 
     constructor(...args) {
         super(...args);
@@ -13,4 +13,4 @@ class MyKlasaClient extends Client {
 
 }
 
-new MyKlasaClient(config).login(token);
+new Sparky(config).login(token);

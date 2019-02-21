@@ -172,4 +172,4 @@ module.exports.config = {
 };
 
 // The token for this bot to login with
-module.exports.token = process.env.token;
+module.exports.token = "";

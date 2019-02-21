@@ -9,6 +9,10 @@
 <a href="https://discord.gg/6QJUM7R">
     <img src="https://img.shields.io/discord/502930687503106068.svg?colorB=Blue&logo=discord&label=Support&style=for-the-badge" alt="Support">
 </a>
+<a href="https://travis-ci.com/Sparky-Discord-Bot/Sparky">
+    <img src="https://img.shields.io/travis/Sparky-Discord-Bot/Sparky/master.svg?style=for-the-badge" alt="Build">
+</a>
+
 
 <a href="https://github.com/Sparky-Discord-Bot/Sparky">
     <img src="https://img.shields.io/codacy/grade/02f6a273149c4b2fa37b11e59efa478f.svg?style=for-the-badge" alt="Codacy">

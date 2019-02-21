@@ -27,7 +27,7 @@ module.exports.config = {
     // A presence to login with
     presence: {},
     // A once ready message for your console
-    readyMessage: (client) => `Successfully initialized. Ready to serve ${client.guilds.size} guild${client.guilds.size === 1 ? "" : "s"}.`,
+    readyMessage: client => `Successfully initialized. Ready to serve ${client.guilds.size} guild${client.guilds.size === 1 ? "" : "s"}.`,
 
     /**
      * Caching Options
@@ -172,4 +172,4 @@ module.exports.config = {
 };
 
 // The token for this bot to login with
-exports.token = "";
+module.exports.token = "";

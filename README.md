@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/discord/502930687503106068.svg?colorB=Blue&logo=discord&label=Support&style=for-the-badge" alt="Support">
 </a>
 <a href="https://travis-ci.com/Sparky-Discord-Bot/Sparky">
-    <img src="https://img.shields.io/travis/Sparky-Discord-Bot/Sparky/master.svg?style=for-the-badge" alt="Build">
+    <img src="https://img.shields.io/travis/com/Sparky-Discord-Bot/Sparky.svg?style=for-the-badge" alt="Build">
 </a>
 
 

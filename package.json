@@ -4,8 +4,7 @@
   "description": "A Discord bot that ignites a server.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint .",
-    "lint": "eslint --fix ."
+   "test": "echo \"Passed\""
   },
   "repository": "https://github.com/Sparky-Discord-Bot/Sparky",
   "author": "Anish Shobith",

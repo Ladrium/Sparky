@@ -1,5 +1,4 @@
-const { Command, RichMenu } = require('klasa');
-const { MessageEmbed } = require("discord.js");
+const { Command, util: { isFunction } } = require('klasa');
 
 module.exports = class extends Command {
 
@@ -11,43 +10,59 @@ module.exports = class extends Command {
 			usage: '(Command:command)'
 		});
 
-		this.menu = new RichMenu(new MessageEmbed()
-		.setColor(0x673AB7)
-	//	.setAuthor(this.client.user.username, this.client.user.avatarURL())
-		.setTitle('Advanced Commands Help:')
-		.setDescription('Use the arrow reactions to scroll between pages.\nUse number reactions to select an option.')
-	);
+		this.createCustomResolver('command', (arg, possible, message) => {
+			if (!arg || arg === '') return undefined;
+			return this.client.arguments.get('command').run(arg, possible, message);
+		});
 	}
 
-	async run(message) {
-        const collector = await this.menu.run(await message.send('Loading commands...'));
+	async run(message, [command]) {
+		if (command) {
+			const info = [
+				`= ${command.name} = `,
+				isFunction(command.description) ? command.description(message.language) : command.description,
+				message.language.get('COMMAND_HELP_USAGE', command.usage.fullUsage(message)),
+				message.language.get('COMMAND_HELP_EXTENDED'),
+				isFunction(command.extendedHelp) ? command.extendedHelp(message.language) : command.extendedHelp
+			].join('\n');
+			return message.sendMessage(info, { code: 'asciidoc' });
+		}
+		const help = await this.buildHelp(message);
+		const categories = Object.keys(help);
+		const helpMessage = [];
+		for (let cat = 0; cat < categories.length; cat++) {
+			helpMessage.push(`**${categories[cat]} Commands**:`, '```asciidoc');
+			const subCategories = Object.keys(help[categories[cat]]);
+			for (let subCat = 0; subCat < subCategories.length; subCat++) helpMessage.push(`= ${subCategories[subCat]} =`, `${help[categories[cat]][subCategories[subCat]].join('\n')}\n`);
+			helpMessage.push('```', '\u200b');
+		}
 
-        const choice = await collector.selection;
-        if (choice === null) {
-            return collector.message.delete();
-        }
+		return message.author.send(helpMessage, { split: { char: '\u200b' } })
+			.then(() => { if (message.channel.type !== 'dm') message.sendLocale('COMMAND_HELP_DM'); })
+			.catch(() => { if (message.channel.type !== 'dm') message.sendLocale('COMMAND_HELP_NODM'); });
+	}
 
-        const command = this.client.commands.get(this.menu.options[choice].name);
-        const info = new MessageEmbed()
-            .setTitle(`Command \`${message.guild.settings.prefix}${command.name}\``)
-            .setDescription(typeof command.description === 'function' ? command.description(message) : command.description)
-            .addField('Usage:', command.usageString);
+	async buildHelp(message) {
+		const help = {};
 
-        if (command.extendedHelp && command.extendedHelp !== '') {
-            const extendHelp = typeof command.extendedHelp === 'function' ? command.extendedHelp(message) : command.extendedHelp;
-            info.addField('Help:', extendHelp);
-        }
+		const { prefix } = message.guildSettings;
+		const commandNames = [...this.client.commands.keys()];
+		const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
 
-        return message.sendEmbed(info);
-    }
+		await Promise.all(this.client.commands.map((command) =>
+			this.client.inhibitors.run(message, command, true)
+				.then(() => {
+					if (!help.hasOwnProperty(command.category)) help[command.category] = {};
+					if (!help[command.category].hasOwnProperty(command.subCategory)) help[command.category][command.subCategory] = [];
+					const description = isFunction(command.description) ? command.description(message.language) : command.description;
+					help[command.category][command.subCategory].push(`${prefix}${command.name.padEnd(longest)} :: ${description}`);
+				})
+				.catch(() => {
+					// noop
+				})
+		));
 
-    init() {
-        for (const command of this.client.commands.values()) {
-            this.menu.addOption(command.name, command.description);
-        }
-    }
+		return help;
+	}
 
 };
-
-
-   

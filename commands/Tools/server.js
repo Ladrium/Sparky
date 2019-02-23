@@ -43,7 +43,7 @@ module.exports = class extends Command {
 
 	run(message) {
 		return message.sendEmbed(new MessageEmbed()
-			.setColor(0x00AE86)
+			.setColor("#00AE86")
 			.setThumbnail(message.guild.iconURL())
 			.addField('❯ Name', message.guild.name, true)
 			.addField('❯ ID', message.guild.id, true)

@@ -1,8 +1,4 @@
-/**
- * @author Anish Shobith
- * @file requireProviders
- * @license GPL-3.0
- */
+// Copyright (c) 2017-2018 dirigeants. All rights reserved. MIT license.
 const { Inhibitor } = require('klasa');
 
 module.exports = class extends Inhibitor {

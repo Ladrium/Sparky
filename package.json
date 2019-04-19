@@ -1,23 +1,21 @@
 {
-  "name": "Sparky",
+  "name": "sparky",
   "version": "0.0.2",
-  "description": "A Discord bot that ignites a server.",
   "main": "index.js",
-  "scripts": {
-  "test": "echo \"Passed\""
-  },
-  "repository": "https://github.com/Sparky-Discord-Bot/Sparky",
   "author": "Anish Shobith",
   "license": "GPL-3.0",
   "private": false,
   "dependencies": {
-    "discord.js": "discordjs/discord.js",
-    "eslint": "^5.14.1",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "klasa": "dirigeants/klasa",
-    "klasa-bot-plugin": "^1.0.18",
+    "canvas": "^2.4.1",
+    "canvas-constructor": "github:kyranet/canvasConstructor",
+    "discord.js": "discordjs/discord.js#master",
+    "klasa": "dirigeants/klasa#master",
+    "klasa-tags": "bdistin/klasa-tags#master",
     "mongodb": "^3.1.13",
-    "mongoose": "^5.4.14"
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "./eslint"
   }
 }

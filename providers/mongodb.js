@@ -1,13 +1,7 @@
-/**
- * @author Anish Shobith
- * @file mongodb - Provider
- * @license GPL-3.0
- */
 const { Provider, util: { mergeDefault, mergeObjects, isObject } } = require('klasa');
 const { MongoClient: Mongo } = require('mongodb');
 
-module.exports = class extends Provider {
-
+class MongoDB extends Provider {
 	constructor(...args) {
 		super(...args, { description: 'Allows use of MongoDB functionality throughout Klasa' });
 		this.db = null;
@@ -15,24 +9,18 @@ module.exports = class extends Provider {
 
 	async init() {
 		const connection = mergeDefault({
-			host: 'localhost',
-			port: 27017,
-			db: 'klasa',
-			options: {}
+			url: 'mongodb://localhost',
+			db: 'sparky',
+			options: {},
 		}, this.client.options.providers.mongodb);
-		const mongoClient = await Mongo.connect(
-			`mongodb://${connection.host}.mlab.com:${connection.port}/${connection.db}`,
-			mergeObjects(connection.options, 
-			{ 
+		const mongoClient = await Mongo.connect(connection.url, mergeObjects(connection.options, {
 			useNewUrlParser: true,
-			user:`${connection.username}`,
-			password:`${connection.password}` 
-			}
-	));
+		}));
 		this.db = mongoClient.db(connection.db);
 	}
 
 	/* Table methods */
+
 
 	get exec() {
 		return this.db;
@@ -42,9 +30,11 @@ module.exports = class extends Provider {
 		return this.db.listCollections().toArray().then(collections => collections.some(col => col.name === table));
 	}
 
+
 	createTable(table) {
 		return this.db.createCollection(table);
 	}
+
 
 	deleteTable(table) {
 		return this.db.dropCollection(table);
@@ -88,11 +78,16 @@ module.exports = class extends Provider {
 	replace(table, id, doc) {
 		return this.db.collection(table).replaceOne(resolveQuery(id), this.parseUpdateInput(doc));
 	}
-
-};
+}
 
 const resolveQuery = query => isObject(query) ? query : { id: query };
 
+/**
+   *
+   * @param  {any} obj
+   * @param  {string} [path=""]
+   * @return output
+   */
 function flatten(obj, path = '') {
 	let output = {};
 	for (const [key, value] of Object.entries(obj)) {
@@ -105,3 +100,5 @@ function flatten(obj, path = '') {
 function parseEngineInput(updated) {
 	return Object.assign({}, ...updated.map(entry => ({ [entry.data[0]]: entry.data[1] })));
 }
+
+module.exports = MongoDB;

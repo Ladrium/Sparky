@@ -43,18 +43,18 @@ module.exports = class extends Event {
 		// Slightly smaller text placed above the member's display name
 		ctx.font = '28px sans-serif';
 		ctx.fillStyle = '#ffffff';
-		ctx.fillText('Welcome to the server,', canvas.width / 2.5, canvas.height / 3.5);
+		ctx.fillText(`${member.displayName},`, canvas.width / 2.5, canvas.height / 3.5);
 
 		// Add an exclamation point here and below
 		ctx.font = applyText(canvas, `${member.displayName}!`);
 		ctx.fillStyle = '#ffffff';
-		let x;
-		if(member.guild.memberCount === 1) x = 'st' ;
-		else if(member.guild.memberCount === 2) x = 'nd';
-		else if(member.guild.memberCount === 3) x = 'rd';
-		else x = 'th';
+		// let x;
+		// if(member.guild.memberCount === 1) x = 'st' ;
+		// else if(member.guild.memberCount === 2) x = 'nd';
+		// else if(member.guild.memberCount === 3) x = 'rd';
+		// else x = 'th';
 
-		ctx.fillText(`${member.displayName}!\nYou are ${member.guild.memberCount}${x} Member!`, canvas.width / 2.5, canvas.height / 1.8);
+		ctx.fillText('Left the server!', canvas.width / 2.5, canvas.height / 1.8);
 
 		ctx.beginPath();
 		ctx.arc(125, 125, 100, 0, Math.PI * 2, true);

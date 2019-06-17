@@ -6,12 +6,12 @@
   "license": "GPL-3.0",
   "private": false,
   "dependencies": {
-    "canvas": "^2.4.1",
+    "canvas": "^2.5.0",
     "canvas-constructor": "github:kyranet/canvasConstructor",
     "discord.js": "discordjs/discord.js#master",
     "klasa": "dirigeants/klasa#master",
     "klasa-tags": "bdistin/klasa-tags#master",
-    "mongodb": "^3.1.13",
+    "mongodb": "^3.2.7",
     "path": "^0.12.7"
   },
   "scripts": {

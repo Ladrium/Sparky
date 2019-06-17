@@ -156,4 +156,4 @@ module.exports.config = {
 };
 
 // The token for this bot to login with
-module.exports.token = 'NDg3Njc2NjI4Njk3MDg4MDAw.XLnJnA.TksmeaVmboulzFfP9_lRJNtSpq4';
+module.exports.token = 'NTM3NTE5MjAwNzU2MDM5Njgw.XQUm5g.5M5_wkmP3nlAcFSzJgQOonScwnI';

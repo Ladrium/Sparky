@@ -1,3 +1,5 @@
+// Copyright (c) 2018-2019 AdityaTD. All rights reserved. MIT license.
+
 'use strict';
 
 const { Finalizer } = require('klasa');

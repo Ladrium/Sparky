@@ -43,14 +43,14 @@
 
 <br>
 <br>
-<hr=25%>
+<hr>
 </div>
 
 
 <div align="left">
 
 <img src="https://de11-engine.flamingtext.com/netfu/tmp28007/coollogo_com-248191212.png" align="left">
-
+<br>
 <br>
 
 ❯ [AdithyaTD](https://github.com/AdityaTD)
@@ -66,7 +66,7 @@
 <div align="left">
 
 <img src="https://de5-engine.flamingtext.com/netfu/tmp28004/coollogo_com-25096292.png" align="left">
-
+<br>
 <br>
 
 ❯ [Klasa Pieces](https://github.com/dirigeants/klasa-pieces/)

@@ -11,7 +11,6 @@
 	  { "files": ["*.browser.js"], "env": { "browser": true } }
 	],
 	"rules": {
-	  "strict": ["error", "global"],
 	  "no-await-in-loop": "warn",
 	  "no-compare-neg-zero": "error",
 	  "no-extra-parens": ["warn", "all", {
@@ -96,7 +95,6 @@
 	  "comma-style": "error",
 	  "computed-property-spacing": "error",
 	  "consistent-this": ["error", "$this"],
-	  "eol-last": "error",
 	  "func-names": "error",
 	  "func-name-matching": "error",
 	  "func-style": ["error", "declaration", { "allowArrowFunctions": true }],

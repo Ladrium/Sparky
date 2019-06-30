@@ -1,0 +1,25 @@
+/**
+ * @author Anish Shobith
+ * @license MIT
+ * @file config.js
+ */
+
+module.exports = {
+  config: {
+    botName: 'Sparky',
+    token: '',
+    prefix: '',
+    mongodburi: '',
+    /**
+     * @description These are emojis and default settings used by Sparky bot.
+     */
+    Constants: {
+      mainGuild: '',
+      logs: '',
+      tick: '',
+      cross: '',
+      loading: '',
+      coin: '',
+    },
+  },
+};

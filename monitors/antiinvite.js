@@ -1,7 +1,5 @@
 // Copyright (c) 2018-2019 AdityaTD. All rights reserved. MIT license.
 
-'use strict';
-
 const { Monitor } = require('klasa');
 const inviteRegex = /(https?:\/\/)?(www\.)?(discord\.(gg|li|me|io)|discordapp\.con\/invite)\/.+/;
 

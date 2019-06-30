@@ -1,7 +1,5 @@
 // Copyright (c) 2017-2018 dirigeants. All rights reserved. MIT license.
 
-'use strict';
-
 const { Argument, util: { regExpEsc } } = require('klasa');
 const { GuildMember, User } = require('discord.js');
 
@@ -22,7 +20,7 @@ function resolveMember(query, guild) {
 
 module.exports = class extends Argument {
   async run(arg, possible, msg) {
-    if (!msg.guild) throw new Error('This command can only be used inside a guild.');
+    if (!msg.guild) throw 'This command can only be used inside a guild.';
     const resUser = await resolveMember(arg, msg.guild);
     if (resUser) return resUser;
 
@@ -42,9 +40,9 @@ module.exports = class extends Argument {
     }
 
     switch (querySearch.length) {
-      case 0: throw new Error(`${possible.name} Must be a valid name, id or user mention`);
+      case 0: throw `${possible.name} Must be a valid name, id or user mention`;
       case 1: return querySearch[0];
-      default: throw new Error(`Found multiple matches: \`${querySearch.map(user => user.tag).join('`, `')}\``);
+      default: throw `Found multiple matches: \`${querySearch.map(user => user.tag).join('`, `')}\``;
     }
   }
 };

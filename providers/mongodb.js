@@ -1,4 +1,4 @@
-'use strict';
+// Copyright (c) 2017-2018 dirigeants. All rights reserved. MIT license.
 
 const { Provider, util: { mergeDefault, mergeObjects, isObject } } = require('klasa');
 const { MongoClient: Mongo } = require('mongodb');

@@ -6,10 +6,12 @@
 
 module.exports = {
   config: {
+    development: true,
     botName: 'Sparky',
     token: '',
     prefix: '',
     mongodburi: '',
+    dbl: '',
     /**
      * @description These are emojis and default settings used by Sparky bot.
      */

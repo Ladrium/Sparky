@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@kcp/functions@KlasaCommunityPlugins/functions":
+  version "1.0.0"
+  resolved "https://codeload.github.com/KlasaCommunityPlugins/functions/tar.gz/38c83f13f2bb001318ae83c03c16f742f36d6237"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -60,7 +64,6 @@ bson@^1.1.1:
 
 "canvas-constructor@github:kyranet/canvasConstructor":
   version "3.1.0"
-  uid "35267b7c0cd8e5d8c4590febe41a0dfd491f5a24"
   resolved "https://codeload.github.com/kyranet/canvasConstructor/tar.gz/35267b7c0cd8e5d8c4590febe41a0dfd491f5a24"
 
 canvas@^2.5.0:
@@ -145,7 +148,6 @@ detect-libc@^1.0.2:
 
 discord.js@discordjs/discord.js#master:
   version "12.0.0-dev"
-  uid "20d7b3de5905bb0317483436df979f4250c67c1f"
   resolved "https://codeload.github.com/discordjs/discord.js/tar.gz/20d7b3de5905bb0317483436df979f4250c67c1f"
   dependencies:
     form-data "^2.3.3"

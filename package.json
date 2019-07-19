@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "@kcp/functions": "KlasaCommunityPlugins/functions",
     "canvas": "^2.5.0",
     "canvas-constructor": "github:kyranet/canvasConstructor",
     "dblapi.js": "^2.3.0",

@@ -4,7 +4,8 @@
 
 "@kcp/functions@KlasaCommunityPlugins/functions":
   version "1.0.0"
-  resolved "https://codeload.github.com/KlasaCommunityPlugins/functions/tar.gz/38c83f13f2bb001318ae83c03c16f742f36d6237"
+  uid "24c810d27fa62d67b2f44118d50064ca09fe57ad"
+  resolved "https://codeload.github.com/KlasaCommunityPlugins/functions/tar.gz/24c810d27fa62d67b2f44118d50064ca09fe57ad"
 
 abbrev@1:
   version "1.1.1"

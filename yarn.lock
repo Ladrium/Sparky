@@ -150,7 +150,8 @@ detect-libc@^1.0.2:
 
 discord.js@discordjs/discord.js#master:
   version "12.0.0-dev"
-  resolved "https://codeload.github.com/discordjs/discord.js/tar.gz/20d7b3de5905bb0317483436df979f4250c67c1f"
+  uid d8516efa36f62ef8a6e33b0b35ba5f482e22d103
+  resolved "https://codeload.github.com/discordjs/discord.js/tar.gz/d8516efa36f62ef8a6e33b0b35ba5f482e22d103"
   dependencies:
     form-data "^2.3.3"
     node-fetch "^2.3.0"

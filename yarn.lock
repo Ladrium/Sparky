@@ -65,8 +65,8 @@ bson@^1.1.1:
 
 "canvas-constructor@github:kyranet/canvasConstructor":
   version "3.1.0"
-  uid cc8fa5e3f08eac75bbf09c73b65ed0c678a6bacd
-  resolved "https://codeload.github.com/kyranet/canvasConstructor/tar.gz/cc8fa5e3f08eac75bbf09c73b65ed0c678a6bacd"
+  uid "7e53445f902d3d82de2cfdb31072711b157d6441"
+  resolved "https://codeload.github.com/kyranet/canvasConstructor/tar.gz/7e53445f902d3d82de2cfdb31072711b157d6441"
 
 canvas@^2.5.0:
   version "2.5.0"

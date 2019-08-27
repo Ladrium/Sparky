@@ -177,7 +177,7 @@ fs-minipass@^1.2.5:
   dependencies:
     minipass "^2.2.1"
 
-fs-nextra@^0.4.3:
+fs-nextra@^0.4.5:
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/fs-nextra/-/fs-nextra-0.4.5.tgz#0f44a00dd6c0547adaf59ce875e59941d0c70664"
   integrity sha512-oY2o6j0izYzJWp2sow21SekkR3qeMZqHV5ZfNFvfKimFU7piw1/AWwiwbcWjuSfwrfCmHyHymWZOyNbKOzew5g==
@@ -279,10 +279,10 @@ klasa-tags@bdistin/klasa-tags#master:
 
 klasa@dirigeants/klasa#master:
   version "0.5.0-dev"
-  uid "93cc8f2a4d0e3bef4715090e18f18f4ff19007d1"
-  resolved "https://codeload.github.com/dirigeants/klasa/tar.gz/93cc8f2a4d0e3bef4715090e18f18f4ff19007d1"
+  uid "9ae936a59187b62517ae1591efa22c507c98391f"
+  resolved "https://codeload.github.com/dirigeants/klasa/tar.gz/9ae936a59187b62517ae1591efa22c507c98391f"
   dependencies:
-    fs-nextra "^0.4.3"
+    fs-nextra "^0.4.5"
 
 mime-db@1.40.0:
   version "1.40.0"

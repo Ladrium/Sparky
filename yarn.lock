@@ -287,8 +287,8 @@ isarray@~1.0.0:
 
 klasa-tags@bdistin/klasa-tags#master:
   version "1.0.0"
-  uid "4014259de19f2c9354f60f015553feca9b5d8b5d"
-  resolved "https://codeload.github.com/bdistin/klasa-tags/tar.gz/4014259de19f2c9354f60f015553feca9b5d8b5d"
+  uid "830f3f71c816dc341e0fe4e770d240311e2935a1"
+  resolved "https://codeload.github.com/bdistin/klasa-tags/tar.gz/830f3f71c816dc341e0fe4e770d240311e2935a1"
 
 klasa@dirigeants/klasa#master:
   version "0.5.0-dev"
